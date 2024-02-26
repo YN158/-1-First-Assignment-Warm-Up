@@ -45,16 +45,24 @@ public class Exercises1
     *****
 
      */
-    public char[][] generateTriangle(int rows) 
+    public static char[][] generateTriangle(int rows) 
     {
         // TODO
+    	for (int i = 0; i < rows; i++)
+    	{
+    		for (int k = 0; k <= i; k++)
+    		{
+    			System.out.print("*");
+    		}
+    		System.out.println();
+    	}
         return null;
     }
 
 
     public static void main(String[] args) 
     {
-
+    	generateTriangle(8);
     }
 
 }
