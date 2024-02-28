@@ -1,10 +1,17 @@
-public class Exercises1 {
+public class Exercises1 
+{
     /*
     implement a function that returns factorial of given n
      */
-    public long factorial(int n) {
+    public long factorial(int n) 
+    {
         // TODO
-        return 0;
+    	long ans = 1;
+    	for (int i = 1; i < n+1; i++)
+    	{
+    		ans = ans * i; 
+    	}
+        return ans;
     }
 
 
@@ -12,9 +19,18 @@ public class Exercises1 {
     implement a function that return nth number of fibonacci series
     the series -> 1, 1, 2, 3, 5, 8, ...
     */
-    public long fibonacci(int n) {
+    public long fibonacci(int n) 
+    {
         // TODO
-        return 0;
+    	if (n==0)
+    	{
+            return 0;
+    	}
+    	else if( n==1 || n==2 )
+    	{
+            return 1;
+    	}
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
 
@@ -29,14 +45,24 @@ public class Exercises1 {
     *****
 
      */
-    public char[][] generateTriangle(int rows) {
+    public static char[][] generateTriangle(int rows) 
+    {
         // TODO
+    	for (int i = 0; i < rows; i++)
+    	{
+    		for (int k = 0; k <= i; k++)
+    		{
+    			System.out.print("*");
+    		}
+    		System.out.println();
+    	}
         return null;
     }
 
 
-    public static void main(String[] args) {
-        // test your code here!
+    public static void main(String[] args) 
+    {
+    	generateTriangle(8);
     }
 
 }
